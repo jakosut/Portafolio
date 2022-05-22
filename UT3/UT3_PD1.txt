@@ -1,0 +1,49 @@
+Ejercicio 1
+
+Nuevo nodo otroNodo
+otroNodo.siguiente <--- nodo1
+nodo2.siguiente <--- nodo3
+
+a -Inserta “otroNodo” en la lista, quedando como anterior a nodo1.
+-------------------------------------------------------------------------------------------------------------------------
+Ejercicio 2
+
+Nuevo nodo otroNodo
+otroNodo <--- nodo1.siguiente
+nodo1.siguiente <--- nodo3
+
+c- Elimina nodo2 de la lista.
+-------------------------------------------------------------------------------------------------------------------------
+Ejercicio 3
+
+Nuevo nodo otroNodo
+otroNodo.siguiente <--- nodo1.siguiente
+nodo1.siguiente <--- otroNodo
+
+b -Inserta “otroNodo” en la lista, quedando entre nodo1 y nodo2.
+-------------------------------------------------------------------------------------------------------------------------
+Ejercicio 4 
+
+Nuevo nodo otroNodo
+Nuevo nodo nodoActual
+nodoActual <-- primero
+mientras nodoActual <> nulo hacer
+     nodoActual <-- nodoActual.siguiente
+fin mientras
+nodoActual.siguiente <-- otroNodo
+
+c -El algoritmo está mal hecho, ya que dará siempre error en tiempo de ejecución.
+-------------------------------------------------------------------------------------------------------------------------
+Ejercicio 5
+
+Nuevo nodo otroNodo
+Nuevo nodo nodoActual
+nodoActual <-- primero
+mientras nodoActual.siguiente <> nulo hacer
+nodoActual <-- nodoActual.siguiente
+fin mientras
+nodoActual.siguiente <-- otroNodo
+
+a -Inserta correctamente “otroNodo” en la lista, quedando como último nodo.
+------------------------------------------------------------------------------------------------------------------------
+

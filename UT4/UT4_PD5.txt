@@ -1,0 +1,188 @@
+Clave Menor -
+
+
+Lenguaje Natural :  Recorre el arbol preguntando si tiene hijo izquierdo. Voy guardando los valores
+hasta que no exista otro hijo izquierdo, entonces me quedo con el valor del ultimo hijo izquierdo
+encontrado
+
+PreCondiciones:
+ 
+-Exita Arbol y sea del tipo ABB
+
+
+
+PostCondiciones:
+
+-El arbol no cambia
+
+Pseudocodigo:
+
+ClaveMenor():Elemento
+
+elemento menor <--- this
+	Si(hijoIzq != nulo)
+		menor <-- hijoIzq.ClaveMenor()
+	Fin Si
+	
+	Retorno menor
+------------------------------------------------------------------------------------
+Clave Mayor
+
+	
+Lenguaje Natural :  Recorre el arbol preguntando si tiene hijo derecho. Voy guardando los valores
+hasta que no exista otro hijo derecho, entonces me quedo con el valor del ultimo hijo derecho
+encontrado.
+
+
+PreCondiciones:
+ 
+-Exita Arbol y sea del tipo ABB
+
+
+
+PostCondiciones:
+
+-El arbol no cambia
+
+Pseudocodigo:
+
+ClaveMayor():Elemento
+	
+	elemento mayor <--- this
+	Si(hijoDer != nulo)
+		mayor <-- hijoDer.ClaveMayor}()
+	Fin Si
+	
+	Retorno mayor
+------------------------------------------------------------------------------------------------------------
+
+clave inmediata anterior a una clave dada - 
+
+Lenguaje Natural : Si no tiene hijo izquierdo ni derecho, devuelvo -1 , voy comparando la clave con la etiqueta . Si la clave es menor a la etiqueta del nodo donde estoy parado, pregunto 
+si tiene hijo izquierdo y si la clave es la misma a la etiqueta, en caso que sea. devuelvo la etiqueta del nodo donde estoy parado. En caso contrario sigo repitiendo hasta encontrar la etiqueta
+o hasta que no exista mas hijos. Si la clave es mayor a la etiqueta, hago el mismo procedimiento para el hijo derecho.
+
+
+PreCondiciones:  
+
+-Sea un ABB
+
+-Exita el arbol 
+
+
+PostCondiciones:
+
+-Arbol se mantiene igual
+
+
+claveAnterior(clave) 
+        Si (hijoIzq == nulo y hijoDer == nulo) 
+            retornar -1
+		Fin Si
+        SiNo
+            Si (clave < etiqueta)
+                Si (hijoIzq != nulo y hijoIzq.Etiqueta == clave) 
+                    retornar etiqueta
+                SiNo
+                    retornar hijoIzq.claveAnterior(clave)
+            Fin Si
+				Fin Si
+				
+            SiNo
+                Si (clave > etiqueta)
+                    Si (hijoDer != nulo y hijoDer.Etiqueta == clave) 
+                        retornar etiqueta
+						SiNo
+                        retornar hijoDer.claveAnterior(clave)
+                Fin Si
+					Fin Si
+                SiNo
+                    retornar -1
+
+	Fin
+	
+--------------------------------------------------------------------------------------------------------------------------------
+Obtener la cantidad de nodos de un nivel dado (por parámetro)
+
+
+Lenguaje Natural : Voy recorriendo el arbol, si no tiene hijos , devuelvo 1 elemento . Sino voy recorriendo el subarbol izquierdo hasta llegar al nivel y guardo los elemento, luego 
+recorro el subarbolderecho y hago lo mismo. Retorno al final la suma de los elementos guardados. Si no se encuentra el nivel que se pasa por parametro devuelve 0 
+
+
+PreCondiciones:  
+
+-Sea un ABB
+
+-Exita el arbol 
+
+
+PostCondiciones:
+
+-Arbol se mantiene igual
+
+
+
+cantNodosNivel(nivel) 
+izq = 0
+der = 0
+Si (nivel == 0) 
+    return 1
+Fin Si
+ SiNo
+    Si (hijoIzq != nulo) 
+        izq = izq + hijoIzq.cantNodosNivel(nivel - 1)
+	Fin Si
+    Si (hijoDer != null) 
+        der = der + hijoDer.cantNodosNivel(nivel - 1)
+    Fin Si
+    retornar izq + der;
+Fin	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Verificar que el Arbol Binario es de busquea
+
+
+
+Lenguaje Natural : Voy recorriendo el arbol, comparo la etiqueta del nodo donde estoy parado con el hjio izquierdo, si es menor, esta ok y sigo, sino retorno falso. Lo mismo con
+el derecho, si comparo y la clave del hijo derecho es mayor, ok, sino devuelvo falso
+
+
+PreCondiciones:  
+
+-Sea un ABB
+
+-Exita el arbol 
+
+
+PostCondiciones:
+
+-Arbol se mantiene igual
+
+
+   public boolean esABB() 
+            izq = true
+            der = true
+            Si (hijoIzq == nulo y hijoDer == nulo) 
+                retornar true
+			Fin Si
+				
+            Si No
+                Si (hijoIzq != nulo)
+                    Si (this.Etiqueta > hijoIzq.Etiqueta)
+                        retornar izq y hijoIzq.esABB()
+                Fin Si
+					Fin Si
+					SiNo
+                        retornar false
+                    
+                Si (hijoDer != nulo) 
+                    Si (this.Etiqueta < hijoDer.Etiqueta)
+                        retornar der y hijoDer.esABB()
+                Fin Si
+					Fin Si
+					SiNo
+                        retornar false
+                    
+                retornar izq y der
+    
+           

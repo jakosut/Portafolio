@@ -34,7 +34,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Juan/Documents/GitHub/Portafolio/UT4/UT5_PD2",
+    "last_opened_file_path": "C:/Users/Juan/Documents/Facultad/Algoritmos y Estructura de Datos ULTIMO!!/Segundo Parcial/Parciales 2/Parcial2 rehecho_Piezas -- OK",
     "settings.editor.selected.configurable": "Errors"
   }
 }]]></component>
@@ -69,7 +69,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.UT5_PD2.Main" />
-        <item itemvalue="Application.arboles.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -89,6 +88,8 @@
       <workItem from="1653177340790" duration="803000" />
       <workItem from="1653234258611" duration="204000" />
       <workItem from="1653234543569" duration="1054000" />
+      <workItem from="1653251118878" duration="5055000" />
+      <workItem from="1653265624242" duration="4910000" />
     </task>
     <servers />
   </component>
@@ -98,10 +99,19 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/UT5_PD2/ElementoAB.java</url>
+          <line>67</line>
+          <properties class="UT5_PD2.ElementoAB" method="altura">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/UT5_PD2/ArbolBB.java</url>
-          <line>82</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/src/main/java/UT5_PD2/Main.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -97,4 +97,7 @@ public interface IElementoAB<T> {
     public int altura();
 
 
+    public int completos();
+
+
 }

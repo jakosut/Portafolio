@@ -180,6 +180,27 @@ public class ElementoAB<T> implements IElementoAB<T> {
         return aux;
     }
 
+
+
+    public int completos() {
+        int completos = 0;
+        if (this.hijoIzq == null && this.hijoDer == null) {
+            return 0;
+        }
+        if (this.hijoIzq != null) {
+            completos += this.hijoIzq.completos();
+        }
+        if (this.hijoDer != null) {
+            completos += this.hijoDer.completos();
+        }
+        if (this.hijoIzq != null && this.hijoDer != null) {
+            completos += 1;
+        }
+        return completos;
+    }
+
+
+
 }
     
     

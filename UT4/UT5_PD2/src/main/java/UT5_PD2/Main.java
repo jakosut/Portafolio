@@ -25,7 +25,7 @@ public class Main {
 
 
 
-        IElementoAB<Integer> busqueda = arbol.buscar(10635);
+    /*    IElementoAB<Integer> busqueda = arbol.buscar(10635);
         System.out.println(busqueda.getEtiqueta());
 
 
@@ -33,7 +33,10 @@ public class Main {
         ManejadorArchivosGenerico.escribirArchivo("recorridos.txt",salida);
         System.out.println(arbol.inOrden());
         System.out.println(arbol.preOrden());
-        System.out.println(arbol.postOrden());
+        System.out.println(arbol.postOrden());*/
+        System.out.println(arbol.altura());
+       // System.out.println(arbol.completos());
+
 
     }
 }

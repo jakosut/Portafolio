@@ -79,5 +79,15 @@ public class ArbolBB<T> implements IArbolBB<T> {
     public void setRaiz(ElementoAB<T> nuevaRaiz) {
         raiz = nuevaRaiz;
     }
+
+    public int completos(){
+        if (raiz == null) {
+            return 0;
+        }
+        return raiz.completos();
+    }
+
+
+
 }
 
